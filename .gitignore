@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+outputs/
+.venv/
+data/iam_inventory_real.json
+data/hr_leavers.txt
+data/seed_state.json

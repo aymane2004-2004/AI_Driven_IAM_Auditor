@@ -1,0 +1,398 @@
+[
+  {
+    "id": "USR001",
+    "nom": "Sarah El Amrani",
+    "poste": "Manager SecOps",
+    "departement": "Sécurité",
+    "roles_azure": [
+      "Security Admin",
+      "Log Analytics Contributor"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-01"
+  },
+  {
+    "id": "USR002",
+    "nom": "Salma Alaoui",
+    "poste": "Ingénieur Cloud",
+    "departement": "IT",
+    "roles_azure": [
+      "Contributor-Prod-RG",
+      "Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-06"
+  },
+  {
+    "id": "USR003",
+    "nom": "Reda Bensouda",
+    "poste": "Manager SecOps",
+    "departement": "Sécurité",
+    "roles_azure": [
+      "Security Admin",
+      "Log Analytics Contributor"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-21"
+  },
+  {
+    "id": "USR004",
+    "nom": "Yassine El Amrani",
+    "poste": "Analyste Finance",
+    "departement": "Finance",
+    "roles_azure": [
+      "Billing Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-07"
+  },
+  {
+    "id": "USR005",
+    "nom": "Salma El Amrani",
+    "poste": "Ingénieur Cloud",
+    "departement": "IT",
+    "roles_azure": [
+      "Contributor-Prod-RG",
+      "Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-22"
+  },
+  {
+    "id": "USR006",
+    "nom": "Reda Fassi",
+    "poste": "Ingénieur Cloud",
+    "departement": "IT",
+    "roles_azure": [
+      "Contributor-Prod-RG",
+      "Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-02"
+  },
+  {
+    "id": "USR007",
+    "nom": "Lina Berrada",
+    "poste": "Analyste Finance",
+    "departement": "Finance",
+    "roles_azure": [
+      "Billing Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-09"
+  },
+  {
+    "id": "USR008",
+    "nom": "Hamza Idrissi",
+    "poste": "Ingénieur Cloud",
+    "departement": "IT",
+    "roles_azure": [
+      "Contributor-Prod-RG",
+      "Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-01"
+  },
+  {
+    "id": "USR009",
+    "nom": "Salma Idrissi",
+    "poste": "Ingénieur Cloud",
+    "departement": "IT",
+    "roles_azure": [
+      "Contributor-Prod-RG",
+      "Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-06"
+  },
+  {
+    "id": "USR010",
+    "nom": "Hamza Bensouda",
+    "poste": "Développeur Python Junior",
+    "departement": "IT",
+    "roles_azure": [
+      "Reader",
+      "Contributor-Dev-RG"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-28"
+  },
+  {
+    "id": "USR011",
+    "nom": "Lina Berrada",
+    "poste": "Consultante RH",
+    "departement": "RH",
+    "roles_azure": [
+      "RH-User-Access"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-08"
+  },
+  {
+    "id": "USR012",
+    "nom": "Imane Bensouda",
+    "poste": "Manager SecOps",
+    "departement": "Sécurité",
+    "roles_azure": [
+      "Security Admin",
+      "Log Analytics Contributor"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-27"
+  },
+  {
+    "id": "USR013",
+    "nom": "Reda Berrada",
+    "poste": "Développeur Python Junior",
+    "departement": "IT",
+    "roles_azure": [
+      "Reader",
+      "Contributor-Dev-RG"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-19"
+  },
+  {
+    "id": "USR014",
+    "nom": "Nadia Tazi",
+    "poste": "Chargé Marketing",
+    "departement": "Marketing",
+    "roles_azure": [
+      "Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-07"
+  },
+  {
+    "id": "USR015",
+    "nom": "Salma Berrada",
+    "poste": "Développeur Python Junior",
+    "departement": "IT",
+    "roles_azure": [
+      "Reader",
+      "Contributor-Dev-RG"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-07"
+  },
+  {
+    "id": "USR016",
+    "nom": "Sarah Fassi",
+    "poste": "Ingénieur Cloud",
+    "departement": "IT",
+    "roles_azure": [
+      "Contributor-Prod-RG",
+      "Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-01"
+  },
+  {
+    "id": "USR017",
+    "nom": "Nadia Alaoui",
+    "poste": "Analyste Finance",
+    "departement": "Finance",
+    "roles_azure": [
+      "Billing Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-28"
+  },
+  {
+    "id": "USR018",
+    "nom": "Salma Berrada",
+    "poste": "Consultante RH",
+    "departement": "RH",
+    "roles_azure": [
+      "RH-User-Access"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-19"
+  },
+  {
+    "id": "USR019",
+    "nom": "Lina Alaoui",
+    "poste": "Développeur Python Junior",
+    "departement": "IT",
+    "roles_azure": [
+      "Reader",
+      "Contributor-Dev-RG"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-22"
+  },
+  {
+    "id": "USR020",
+    "nom": "Salma Alaoui",
+    "poste": "Manager SecOps",
+    "departement": "Sécurité",
+    "roles_azure": [
+      "Security Admin",
+      "Log Analytics Contributor"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-25"
+  },
+  {
+    "id": "USR021",
+    "nom": "Karim Tazi",
+    "poste": "Analyste Finance",
+    "departement": "Finance",
+    "roles_azure": [
+      "Billing Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-29"
+  },
+  {
+    "id": "USR022",
+    "nom": "Salma El Amrani",
+    "poste": "Développeur Python Junior",
+    "departement": "IT",
+    "roles_azure": [
+      "Reader",
+      "Contributor-Dev-RG"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-29"
+  },
+  {
+    "id": "USR023",
+    "nom": "Karim Bensouda",
+    "poste": "Analyste Finance",
+    "departement": "Finance",
+    "roles_azure": [
+      "Billing Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-10-03"
+  },
+  {
+    "id": "USR024",
+    "nom": "Nadia Tazi",
+    "poste": "Chargé Marketing",
+    "departement": "Marketing",
+    "roles_azure": [
+      "Reader"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-19"
+  },
+  {
+    "id": "USR025",
+    "nom": "Amine Chraibi",
+    "poste": "Stagiaire Marketing",
+    "departement": "Marketing",
+    "roles_azure": [
+      "Reader",
+      "Global Administrator"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-24"
+  },
+  {
+    "id": "USR026",
+    "nom": "Admin-Service-CI-CD",
+    "poste": "Compte de Service Automatisation",
+    "departement": "IT",
+    "roles_azure": [
+      "Owner"
+    ],
+    "mfa_active": false,
+    "type_compte": "service",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-27"
+  },
+  {
+    "id": "USR027",
+    "nom": "Fatima Zahra",
+    "poste": "Ex-Employée (départ mai)",
+    "departement": "Finance",
+    "roles_azure": [
+      "Billing Reader",
+      "Contributor"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "parti",
+    "derniere_connexion": "2026-09-27"
+  },
+  {
+    "id": "USR028",
+    "nom": "Mehdi Cherkaoui",
+    "poste": "Analyste Finance",
+    "departement": "Finance",
+    "roles_azure": [
+      "Billing Reader",
+      "Contributor"
+    ],
+    "mfa_active": true,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-05-27"
+  },
+  {
+    "id": "USR029",
+    "nom": "Zineb Lahlou",
+    "poste": "Consultante RH",
+    "departement": "RH",
+    "roles_azure": [
+      "RH-User-Access",
+      "User Access Administrator"
+    ],
+    "mfa_active": false,
+    "type_compte": "humain",
+    "statut_rh": "actif",
+    "derniere_connexion": "2026-09-19"
+  }
+]

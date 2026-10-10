@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IAM Auditor Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <div class="container">
+      <header class="topbar">
+        <div>
+          <span class="badge">IAM SECURITY LAB</span>
+          <h1>IAM Auditor</h1>
+        </div>
+        <div class="status-pill">Azure + Entra + AI</div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Identity risk detection</p>
+          <h2>Find privilege abuse, stale access, guest exposure, and dormant identities.</h2>
+          <p>
+            Launch a full IAM audit without writing shell commands. This interface helps you simulate real security scenarios and trace every pipeline step.
+          </p>
+        </div>
+        <div class="stat-panel">
+          <div class="mini-stat">
+            <span>Rules</span>
+            <strong>7</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Risk states</span>
+            <strong>4</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Output</span>
+            <strong>PDF</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <div class="card form-card">
+          <h3>Launch audit</h3>
+
+          <form action="/run" method="post">
+            <label>
+              Input inventory
+              <input type="text" name="input_file" value="iam_inventory.json" />
+            </label>
+
+            <div class="checkbox-row">
+              <label class="check-item">
+                <input type="checkbox" name="no_llm" />
+                <span>Rules only</span>
+              </label>
+              <label class="check-item">
+                <input type="checkbox" name="deep_mode" />
+                <span>Deep review</span>
+              </label>
+            </div>
+
+            <button type="submit">Run audit</button>
+          </form>
+        </div>
+
+        <div class="card timeline-card">
+          <h3>Workflow trace</h3>
+          <ul class="timeline">
+            <li><span>1</span> Create test tenant</li>
+            <li><span>2</span> Seed fake identities and roles</li>
+            <li><span>3</span> Collect Entra data</li>
+            <li><span>4</span> Overlay MFA and login history</li>
+            <li><span>5</span> Analyze and export PDF report</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card feature-grid">
+        <div>
+          <h4>Risk categories</h4>
+          <ul>
+            <li>Excessive privilege</li>
+            <li>Missing MFA</li>
+            <li>Leaver still active</li>
+            <li>Dormant accounts</li>
+            <li>Guest and service principal abuse</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Output</h4>
+          <ul>
+            <li>JSON findings</li>
+            <li>Markdown report</li>
+            <li>Executive PDF</li>
+            <li>AI remediation summary</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Compliance</h4>
+          <ul>
+            <li>NIST CSF 2.0</li>
+            <li>ISO 27001:2022</li>
+            <li>Least-privilege review</li>
+            <li>Security evidence trail</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

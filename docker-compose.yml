@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  iam-auditor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: iam-auditor-web
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - AZURE_TENANT_ID=${AZURE_TENANT_ID:-}
+      - AZURE_CLIENT_ID=${AZURE_CLIENT_ID:-}
+      - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET:-}
+    volumes:
+      - .:/app
+    restart: unless-stopped

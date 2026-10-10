@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IAM Audit Job</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </head>
+  <body class="job-body">
+    <div class="container narrow">
+      <header class="topbar">
+        <div>
+          <span class="badge">LIVE JOB</span>
+          <h1>Audit trace</h1>
+        </div>
+        <a class="button-secondary" href="{{ url_for('index') }}">Back to dashboard</a>
+      </header>
+
+      <section class="card job-card">
+        <div class="job-header">
+          <div>
+            <p class="eyebrow">Job ID</p>
+            <h3 id="job-id">{{ job.job_id }}</h3>
+          </div>
+          <div class="status-wrap">
+            <span id="status-badge" class="status-badge {{ job.status }}">{{ job.status }}</span>
+          </div>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric-box">
+            <span>Started</span>
+            <strong id="started-at">{{ job.started_at or 'pending' }}</strong>
+          </div>
+          <div class="metric-box">
+            <span>Finished</span>
+            <strong id="finished-at">{{ job.finished_at or 'pending' }}</strong>
+          </div>
+          <div class="metric-box">
+            <span>Command</span>
+            <strong id="command-text">{{ job.command }}</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="card log-card">
+        <div class="section-head">
+          <h3>Workflow output</h3>
+          <span id="job-status-text">Tracking pipeline progress...</span>
+        </div>
+        <pre id="log-output" class="log-output">{% for line in job.logs %}{{ line }}
+{% endfor %}</pre>
+      </section>
+
+      <section class="card artifact-card">
+        <h3>Generated artifacts</h3>
+        <div id="artifact-list" class="artifact-list">
+          {% if job.artifacts %}
+            {% for artifact in job.artifacts %}
+              <a href="{{ artifact.url }}" target="_blank">{{ artifact.name }}</a>
+            {% endfor %}
+          {% else %}
+            <p>Artifacts will appear here when the audit completes.</p>
+          {% endif %}
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const jobId = "{{ job.job_id }}";
+      const pollInterval = 2000;
+      const logEl = document.getElementById('log-output');
+      const statusBadge = document.getElementById('status-badge');
+      const startedAtEl = document.getElementById('started-at');
+      const finishedAtEl = document.getElementById('finished-at');
+      const jobStatusText = document.getElementById('job-status-text');
+      const artifactList = document.getElementById('artifact-list');
+
+      function updateView(data) {
+        statusBadge.textContent = data.status;
+        statusBadge.className = `status-badge ${data.status}`;
+        startedAtEl.textContent = data.started_at || 'pending';
+        finishedAtEl.textContent = data.finished_at || 'pending';
+        jobStatusText.textContent = data.status === 'completed'
+          ? 'Audit completed successfully.'
+          : data.status === 'failed'
+            ? 'The pipeline encountered an error.'
+            : 'Tracking pipeline progress...';
+
+        if (data.logs && data.logs.length) {
+          logEl.textContent = data.logs.join('\n');
+          logEl.scrollTop = logEl.scrollHeight;
+        }
+
+        if (data.artifacts && data.artifacts.length) {
+          artifactList.innerHTML = data.artifacts.map(item => {
+            return `<a href="${item.url}" target="_blank">${item.name}</a>`;
+          }).join('');
+        }
+      }
+
+      function poll() {
+        fetch(`/api/jobs/${jobId}`)
+          .then(response => response.json())
+          .then(data => {
+            updateView(data);
+            if (data.status === 'completed' || data.status === 'failed') {
+              return;
+            }
+            setTimeout(poll, pollInterval);
+          })
+          .catch(() => setTimeout(poll, pollInterval));
+      }
+
+      poll();
+    </script>
+  </body>
+</html>
